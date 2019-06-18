@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeWork23_06_19.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,10 @@ namespace HomeWork23_06_19
     /// </summary>
     public partial class MainWindow : Window
     {
+        private EmailSender _emailSender = new EmailSender();
+        private FileDownloader _fileDownloader = new FileDownloader();
+        private CatalogMover _catalogMover = new CatalogMover();
+
         public MainWindow()
         {
             InitializeComponent();
